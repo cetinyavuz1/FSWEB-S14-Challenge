@@ -6,8 +6,10 @@ public class DeluxeBurger extends Hamburger{
     private String drink;
 
     public DeluxeBurger() {
+        super.setPrice(19.10);
         this.cips = "CURVY";
         this.drink = "COKE";
+
     }
 
     public String getCips() {
@@ -16,11 +18,6 @@ public class DeluxeBurger extends Hamburger{
 
     public String getDrink() {
         return drink;
-    }
-
-    @Override
-    public void setPrice(double price){
-        super.setPrice(19.10);
     }
 
     @Override

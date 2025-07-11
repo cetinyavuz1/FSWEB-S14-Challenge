@@ -12,11 +12,6 @@ public class HealthyBurger extends Hamburger{
         super.setMeat("Tofu");
     }
 
-    @Override
-    public String getMeat(){
-        return super.getMeat();
-    }
-
     public void addHealthyAddition1(String name, double price){
         healthyExtra1Name = name;
         healthyExtra1Price = price;
@@ -30,7 +25,7 @@ public class HealthyBurger extends Hamburger{
     @Override
     public double itemizeHamburger() {
         System.out.println(healthyExtra1Name + " " + healthyExtra2Name);
-        setPrice(super.getPrice() + healthyExtra2Price + healthyExtra1Price);
+        super.setPrice(super.getPrice() + healthyExtra2Price + healthyExtra1Price);
         return super.getPrice() + healthyExtra2Price + healthyExtra1Price;
     }
 }
